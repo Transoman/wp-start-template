@@ -1,7 +1,7 @@
 let gp = require('gulp-load-plugins')(),
     svgPath = {
       "input": $.path.source + "images/svg/*.svg",
-      "output": $.path.source + "images/svg/"
+      "output": $.path.build + "images/svg/"
     };
 
 module.exports = function () {

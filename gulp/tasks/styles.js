@@ -20,7 +20,7 @@ module.exports = function () {
       .pipe(gp.groupCssMediaQueries())
       .pipe(gp.sourcemaps.write())
       .pipe($.gulp.dest(stylesPATH.ouput))
-      .on('end', $.browserSync.stream);
+      .pipe($.browserSync.stream());
   });
 
   $.gulp.task('styles:build', () => {
