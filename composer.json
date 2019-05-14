@@ -14,7 +14,7 @@
     "wpackagist-plugin/force-regenerate-thumbnails": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/google-sitemap-generator": "*",
-    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/contact-form-7": "*"
   },
   "extra": {
     "wordpress-install-dir": "app/wp",
