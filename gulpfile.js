@@ -5,7 +5,7 @@ global.$ = {
   path: {
     task: require('./gulp/path/tasks.js'),
     source: 'src/',
-    build: 'app/content/themes/mytheme/'
+    build: 'app/content/themes/irontheme/'
   },
   gulp: require('gulp'),
   browserSync: require('browser-sync').create(),
