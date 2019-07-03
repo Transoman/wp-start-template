@@ -23,6 +23,7 @@ $.gulp.task('dev', $.gulp.series(
     'styles:dev',
     'img:dev',
     'js:dev',
+    'js:copy',
     'svg'
   )
 ));
@@ -34,6 +35,7 @@ $.gulp.task('build', $.gulp.series(
     'styles:build-min',
     'img:build',
     'js:build-min',
+    'js:copy',
     'svg'
   )
 ));
