@@ -32,3 +32,16 @@ function vd( $var, $die = true ) {
     die();
   }
 }
+
+/**
+ * SVG Sprite Icon
+ */
+function ith_the_icon($icon_name, $icon_class = false) {
+  $html = '<svg class="'. $icon_class .'"><use xlink:href="'. THEME_URL .'/images/svg/symbol/sprite.svg#'. $icon_name .'"></use></svg>';
+  echo $html;
+}
+
+function ith_get_icon($icon_name, $icon_class = false) {
+  $html = '<svg class="'. $icon_class .'"><use xlink:href="'. THEME_URL .'/images/svg/symbol/sprite.svg#'. $icon_name .'"></use></svg>';
+  return $html;
+}

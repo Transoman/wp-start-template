@@ -42,3 +42,10 @@
 =rhmin($height)
   @media only screen and (min-height: $height + "px")
     @content
+
+// For Fancybox
+@function max($numbers...)
+  @return m#{a}x(#{$numbers})
+
+@function min($numbers...)
+  @return m#{i}n(#{$numbers})

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mytheme
+ * @package ith
  */
 
 ?>
@@ -22,21 +22,21 @@
       ?>
       <div class="entry-meta">
         <?php
-        mytheme_posted_on();
-        mytheme_posted_by();
+        ith_posted_on();
+        ith_posted_by();
         ?>
       </div><!-- .entry-meta -->
     <?php endif; ?>
   </header><!-- .entry-header -->
 
-  <?php mytheme_post_thumbnail(); ?>
+  <?php ith_post_thumbnail(); ?>
 
   <div class="entry-content">
     <?php
     the_content( sprintf(
       wp_kses(
         /* translators: %s: Name of current post. Only visible to screen readers */
-        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mytheme' ),
+        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ith' ),
         array(
           'span' => array(
             'class' => array(),
@@ -47,13 +47,13 @@
     ) );
 
     wp_link_pages( array(
-      'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mytheme' ),
+      'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ith' ),
       'after'  => '</div>',
     ) );
     ?>
   </div><!-- .entry-content -->
 
   <footer class="entry-footer">
-    <?php mytheme_entry_footer(); ?>
+    <?php ith_entry_footer(); ?>
   </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

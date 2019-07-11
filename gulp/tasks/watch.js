@@ -6,5 +6,6 @@ module.exports = function () {
       $.path.source + 'images/content/**/*.{png,jpg,gif,svg}'], $.gulp.series('img:dev'));
     $.gulp.watch($.path.source + 'images/svg/*.svg', $.gulp.series('svg'));
     $.gulp.watch($.path.source + 'js/**/*.js', $.gulp.series('js:dev', 'js:copy'));
+    $.gulp.watch($.path.source + 'fonts/**/*.*', $.gulp.series('fonts'));
   });
 };
