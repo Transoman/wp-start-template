@@ -30,7 +30,7 @@ module.exports = function () {
           ]
         }),
         gp.imagemin.optipng({optimizationLevel: 3}),
-        pngquant({quality: '65-70', speed: 5})
+        pngquant({quality: [0.65, 0.7], speed: 5})
       ], {
         verbose: true
       })))
