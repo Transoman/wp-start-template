@@ -35,3 +35,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Helpers functions
  */
 require get_template_directory() . '/inc/helpers.php';
+
+/**
+ * ACF
+ */
+if ( class_exists( 'acf' ) ) {
+
+	require get_template_directory() . '/inc/acf.php';
+}

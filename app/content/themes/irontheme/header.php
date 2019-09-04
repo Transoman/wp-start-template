@@ -19,6 +19,7 @@
     <div class="container">
 
       <nav class="nav">
+        <button type="button" class="nav__close"></button>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'primary',
@@ -31,6 +32,12 @@
         ) );
         ?>
       </nav>
+
+      <div class="nav-overlay"></div>
+
+      <button type="button" class="nav-toggle">
+        <span class="nav-toggle__line"></span>
+      </button>
 
     </div>
   </header><!-- /.header-->

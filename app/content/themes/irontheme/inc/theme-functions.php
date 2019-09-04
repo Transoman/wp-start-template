@@ -147,6 +147,15 @@ add_action( 'wp_enqueue_scripts', 'ith_scripts' );
  */
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+/**
+ * Validate Phone Number CF7
+ */
+function custom_filter_wpcf7_is_tel( $result, $tel ) {
+	$result = preg_match( '/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{4}/', $tel );
+	return $result;
+}
+add_filter( 'wpcf7_is_tel', 'custom_filter_wpcf7_is_tel', 10, 2 );
+
 function js_variables(){
   $variables = array (
     'ajax_url' => admin_url('admin-ajax.php'),
@@ -154,3 +163,38 @@ function js_variables(){
   echo '<script type="text/javascript">window.wp_data = ' . json_encode($variables) . ';</script>';
 }
 add_action('wp_head','js_variables');
+
+add_filter( 'wp_terms_checklist_args', 'set_checked_ontop_default', 10 );
+function set_checked_ontop_default( $args ) {
+	if( ! isset($args['checked_ontop']) )
+		$args['checked_ontop'] = false;
+	return $args;
+}
+
+/**
+ * Get any posts
+ */
+function get_any_post($post_type, $count = null, $tax_name = null, $tax_id = null, $orderby = 'ID') {
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$args = array(
+		'post_type' => $post_type,
+		'post_status' => 'publish',
+		'posts_per_page' => $count ? $count : get_option('posts_per_page'),
+		'paged' => $paged,
+		'order' => 'ASC',
+		'orderby' => $orderby
+	);
+
+	if ($tax_id && $tax_name) {
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => $tax_name,
+				'field' => 'term_id',
+				'terms' => $tax_id
+			)
+		);
+	}
+
+	$query = new WP_Query( $args );
+	return $query;
+}

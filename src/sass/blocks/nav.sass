@@ -10,9 +10,8 @@
   outline: none
   border: none
   background: none
-  z-index: 101
+  z-index: 10
   cursor: pointer
-  +transition
   &:focus
     outline: none
   &__line
@@ -21,7 +20,7 @@
     height: 2px
     width: 100%
     background: $accent
-    +transition
+    +trans
     &::after, &::before
       content: ''
       position: absolute
@@ -30,7 +29,7 @@
       height: 2px
       width: 100%
       background: $accent
-      +transition
+      +trans
     &::before
       top: -6px
     &::after
