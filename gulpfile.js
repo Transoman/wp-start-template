@@ -20,6 +20,7 @@ $.gulp.task('dev', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'fonts',
+    'smartgrid',
     'styles:dev',
     'img:dev',
     'js:dev',
@@ -32,6 +33,7 @@ $.gulp.task('build', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'fonts',
+    'smartgrid',
     'styles:build-min',
     'img:build',
     'js:build-min',
