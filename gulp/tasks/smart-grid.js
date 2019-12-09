@@ -12,16 +12,16 @@ let settings = {
   },
   breakPoints: {
     lg: {
-      width: '1100px', /* -> @media (max-width: 1100px) */
+      width: '1260px', /* -> @media (max-width: 1230px) */
     },
     md: {
-      width: '960px'
+      width: '992px'
     },
     sm: {
-      width: '780px'
+      width: '767px'
     },
     xs: {
-      width: '560px'
+      width: '576px'
     }
     /*
     We can create any quantity of break points.
