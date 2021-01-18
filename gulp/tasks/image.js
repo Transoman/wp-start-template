@@ -17,7 +17,7 @@ module.exports = function () {
     return $.gulp.src(imgPATH.input)
       .pipe(gp.cache(gp.imagemin([
         gp.imagemin.gifsicle({interlaced: true}),
-        gp.imagemin.jpegtran({progressive: true}),
+        gp.imagemin.mozjpeg({progressive: true}),
         imageminJpegRecompress({
           loops: 5,
           min: 70,

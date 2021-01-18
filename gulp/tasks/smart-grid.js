@@ -36,5 +36,8 @@ let settings = {
 };
 
 module.exports = function () {
-  $.gulp.task('smartgrid', () => smartgrid('./src/sass/_parts', settings));
+  $.gulp.task('smartgrid', (cb) => {
+    smartgrid('./src/sass/_parts', settings);
+    cb();
+  });
 };
