@@ -1,10 +1,10 @@
-  </div><!-- /.content -->
+	</div><!-- /.content -->
 
-  <footer class="footer">
-    <div class="container">
-
-    </div>
-  </footer><!-- #colophon -->
+	<footer class="footer">
+		<div class="container">
+	
+		</div>
+	</footer><!-- #colophon -->
 
 </div><!-- /.wrapper -->
 

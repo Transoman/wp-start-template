@@ -2,7 +2,7 @@ root = true
 
 [*]
 # Использовать отсутпы для пробелов
-indent_style = space
+indent_style = tab
 
 # Использовать 2 пробела для отступа
 indent_size = 2
